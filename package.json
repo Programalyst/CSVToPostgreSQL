@@ -1,0 +1,23 @@
+{
+  "name": "csvtopostgresql",
+  "version": "1.0.0",
+  "description": "parse a csv file and load the data into postgresql",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Programalyst/CSVToPostgreSQL.git"
+  },
+  "author": "Leonard Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Programalyst/CSVToPostgreSQL/issues"
+  },
+  "homepage": "https://github.com/Programalyst/CSVToPostgreSQL#readme",
+  "dependencies": {
+    "fast-csv": "^3.4.0",
+    "pg": "^7.12.1"
+  }
+}
