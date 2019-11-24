@@ -20,8 +20,8 @@ CREATE TABLE fraudsters(user_id uuid
 );
 
 CREATE TABLE currency_details(currency varchar(10) PRIMARY KEY,
-iso_code varchar(3),
-exponent varchar(1),
+iso_code integer,
+exponent integer,
 is_crypto boolean NOT NULL
 );
 

@@ -23,8 +23,12 @@ let csvStream = csv.parseFile('./csv/currency_details.csv', {objectMode: true, h
     {
         console.log(`Parsing row ${counter}`); 
         let currency = row.currency;
-        let iso_code = row.iso_code; //changed database datatype to varchar as there are some null values
-        let exponent = row.exponent; //changed database datatype to varchar as there are some null values
+        let iso_code = row.iso_code;
+        if (iso_code == "" || iso_code == null)
+            iso_code = 0;
+        let exponent = row.exponent; 
+        if (exponent == "" || exponent == null)
+            exponent = 0;
         let is_crypto = row.is_crypto;
 
         //check that table name is correct
