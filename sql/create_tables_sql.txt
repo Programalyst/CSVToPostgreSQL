@@ -1,0 +1,45 @@
+CREATE TABLE transactions(currency varchar(3) NOT NULL,
+amount bigint NOT NULL,
+state varchar(25) NOT NULL,
+created_date timestamp NOT NULL,
+merchant_category varchar(100),
+merchant_country varchar(3),
+entry_method varchar(4) NOT NULL,
+user_id uuid NOT NULL,
+type varchar(20) NOT NULL,
+source varchar(20) NOT NULL,
+id uuid
+);
+
+CREATE TABLE fx_rates(base_ccy varchar(3),
+ccy varchar(10),
+rate double precision
+);
+
+CREATE TABLE fraudsters(user_id uuid
+);
+
+CREATE TABLE currency_details(currency varchar(10) PRIMARY KEY,
+iso_code varchar(3),
+exponent varchar(1),
+is_crypto boolean NOT NULL
+);
+
+CREATE TABLE users(id uuid,
+has_email boolean NOT NULL,
+phone_country varchar(300),
+terms_version date,
+created_date timestamp NOT NULL,
+state varchar(25) NOT NULL,
+country varchar(2),
+birth_year integer,
+kyc varchar(20),
+failed_sign_in_attempts integer
+);
+
+CREATE TABLE countries(code varchar(2),
+name varchar(100),
+code3 varchar(3),
+numcode smallint NOT NULL,
+phonecode smallint
+);		
