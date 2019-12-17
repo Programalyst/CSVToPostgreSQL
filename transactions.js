@@ -11,7 +11,6 @@ const pool = new Pool({
   });
 
 let counter = 0; //keeps track of which row is being parsed
-let startRow = 0;
 let errorRowsArray = []; //store id of all rows with errors
 //Parses a file from the specified path and returns the CsvParserStream.
 //objectMode means return is a object (instead of buffer)
